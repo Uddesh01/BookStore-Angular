@@ -11,13 +11,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DisplayBookComponent } from './Components/display-book/display-book.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { BookContainerComponent } from './Components/book-container/book-container.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookstoreHeaderComponent,
     DashBoardComponent,
-    DisplayBookComponent
+    DisplayBookComponent,
+    BookContainerComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,10 @@ import { DisplayBookComponent } from './Components/display-book/display-book.com
     MatIconModule,
     MatFormFieldModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule,
+    MatMenuModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

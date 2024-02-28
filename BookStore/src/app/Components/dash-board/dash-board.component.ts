@@ -1,4 +1,6 @@
+import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { BookService } from 'src/app/Sevices/book.service';
 
 @Component({
   selector: 'app-dash-board',
@@ -6,10 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dash-board.component.scss']
 })
 export class DashBoardComponent implements OnInit {
+  booksList: { bookID: number, title: string, description: string, author: string, price: number, bookImg: string, quantitys: number }[] = []
+  constructor(private bookService:BookService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
