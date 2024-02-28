@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashBoardComponent } from './Components/dash-board/dash-board.component';
 import { DisplayBookComponent } from './Components/display-book/display-book.component';
 import { BookContainerComponent } from './Components/book-container/book-container.component';
+import { QuickViewComponent } from './Components/quick-view/quick-view.component';
 
 const routes: Routes = [
   { path: "", component: DashBoardComponent },
@@ -11,7 +12,8 @@ const routes: Routes = [
     path: "dashboard",
     component: DashBoardComponent,
     children: [
-      { path: "books", component: BookContainerComponent }
+      { path: "books", component: BookContainerComponent },
+      {path: "quickview", component:QuickViewComponent}
     ]
   }
 ];

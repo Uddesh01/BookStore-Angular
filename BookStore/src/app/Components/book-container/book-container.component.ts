@@ -15,7 +15,6 @@ export class BookContainerComponent implements OnInit {
     this.bookService.getAllBooks().subscribe(
       (res:any) => {
         this.booksList = res.data;
-        console.log(this.booksList)
       },
       err => {
         console.log(err);

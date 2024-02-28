@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from 'src/app/Sevices/data.service';
 
 @Component({
   selector: 'app-display-book',
@@ -7,10 +9,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DisplayBookComponent implements OnInit {
   @Input() book!: { bookID: number, bookName: string, description: string, author: string, price: number, bookImg: string, quantitys: number };
-
-  constructor() { }
+  @Output() bookClicked = new EventEmitter<{bookID: number,bookName: string,description: string,author: string,price: number,bookImg: string,quantitys: number}>();
+  
+  constructor(private router:Router,private dataService:DataService) { }
 
   ngOnInit(): void {
-    console.log('Received book:', this.book);
+  }
+
+  handleBookClick() {
+    this.dataService.setBook(this.book)
+    this.router.navigate(['/dashboard/quickview']);
   }
 }

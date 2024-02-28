@@ -7,6 +7,7 @@ import { DashBoardComponent } from './Components/dash-board/dash-board.component
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -14,6 +15,7 @@ import { DisplayBookComponent } from './Components/display-book/display-book.com
 import {MatMenuModule} from '@angular/material/menu';
 import { BookContainerComponent } from './Components/book-container/book-container.component';
 import { HttpClientModule } from '@angular/common/http';
+import { QuickViewComponent } from './Components/quick-view/quick-view.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     BookstoreHeaderComponent,
     DashBoardComponent,
     DisplayBookComponent,
-    BookContainerComponent
+    BookContainerComponent,
+    QuickViewComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatTooltipModule,
     BrowserAnimationsModule,
     MatIconModule,
+    MatButtonModule,
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
